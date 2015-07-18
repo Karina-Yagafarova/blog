@@ -8,7 +8,39 @@
 </head>
 <body>
 
-<%= yield %>
+<div id="container">
+  <div id="header"><div id="title3">Изучение Ruby</div>
+    <div> <h2 class="img" ><img src="assets/logo.jpg" width="120px"></h2></div>
+    <div><ul class="glmenu"> <li>Блог</li><li>О проекте</li> <li>Ресурсы</li></ul></div>
+    <div id="content">
+
+      <%=yield%>
+
+    </div>
+
+
+    <div id="menu">
+
+      <div id="login-form">
+        <h2>Авторизация на сайте</h2>
+
+        <fieldset>
+          <input type="email" required value="Логин" onBlur="if(this.value=='')this.value='Логин'" onFocus="if(this.value=='Логин')this.value='' ">
+          <input type="password" required value="Пароль" onBlur="if(this.value=='')this.value='Пароль'" onFocus="if(this.value=='Пароль')this.value='' ">
+          <input type="submit" value="ВОЙТИ">
+          <footer class="clearfix">
+            <p><span class="info">?</span><a href="#">Забыли пароль?</a></p>
+          </footer>
+
+        </fieldset>
+      </div>
+    </div>
+
+  </div>
+  <div id="clear"></div>
+  <div id="footer"></div>
+
+</div>
 
 </body>
 </html>
