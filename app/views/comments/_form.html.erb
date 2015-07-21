@@ -12,17 +12,20 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_name %><br>
-    <%= f.text_field :user_name %>
+    <%= f.label :user_name%><br>
+    <%= f.text_field :user_name, placeholder: "Vvedite text" %>
   </div>
-  <div class="field">
-    <%= f.label :body %><br>
-    <%= f.text_field :body %>
-  </div>
+
   <div class="field">
     <%= f.label :age %><br>
-    <%= f.number_field :age %>
+    <%= f.number_field :age, placeholder: "vozrast" %>
   </div>
+    <div class="field">
+      <%= f.label :body %><br>
+      <%= f.text_area :body, placeholder: "Vvedite text"%>
+    </div>
+    <%= f.label :rating%>
+      <%=  select_tag(:rating, options_for_select([['bad',1],['good',2],['best',3],2]))%>
   <div class="actions">
     <%= f.submit %>
   </div>
