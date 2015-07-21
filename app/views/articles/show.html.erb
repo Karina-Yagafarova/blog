@@ -1,9 +1,41 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
+
+<div class="title" id="title2"> <%= @article.title %> </div>
+
+
+<div class="title">Ruby on Rails (рубины на рельсах) - это интернет среда с открытым кодом для
+  разработки интернет приложений заднего плана, использующих базы данных. Она оптимизирована
+  для устойчивой производительности программиста поскольку позволяет ему писать код, используя
+  условные обозначения в конфигурации.</div>
+<div>
+  <ul class="hr">
+  <div>
+    <ul class="hr">
+    <li><%= link_to 'Edit', edit_article_path(@article) %> </li>
+    <li><%= link_to 'Back', articles_path %></li>
+    </ul>
+  </div>
+    </ul>
+</div>
+<div id="comment_form" class="title">
+
+  <div>
+    <input type="text" name="name" id="name" value="" placeholder="Имя">
+  </div>
+  <div>
+    <input type="number" name="age" id="age" value="" placeholder="Возраст">
+  </div>
+  <div>
+    <input type="text" name="rating" id="rating" value="" placeholder="Рейтинг">
+    <%=select_tag(:rating, '<option value="1">Bad</option><option value="2">Good</option><option value="3">Best</option>')%>
+  </div>
+  <div>
+    <textarea rows="10" name="comment" id="comment" placeholder="Комментарий..."></textarea>
+  </div>
+  <div>
+    <input type="submit" name="submit" value="Комментировать">
+  </div>
+
+</div>
