@@ -27,5 +27,12 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  encoding: utf8
+  reconnect: false
+  database: blog
+  pool: 5
+  host: localhost
+  username: postgres
+  password: root
+  port: 5432
