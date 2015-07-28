@@ -15,7 +15,7 @@
 /log/*.log
 /tmp
 .idea/
-Gemfile.lock
+#Gemfile.lock
 README.rdoc
 
 
