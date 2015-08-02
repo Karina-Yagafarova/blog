@@ -1,0 +1,14 @@
+<% @comments.each do |comment| %> <!--Пройтись по всем статьям-->
+    <div>
+      <div class="title" id="title2"> <%= comment.user_name %></div>
+      <div class="title"> <%= comment.body %></div>
+      <div><ul class="hr">
+        <li> <%= comment.created_at %> </li>
+        <li> <%= comment.age %> </li>
+      </ul></div>
+      <div class="line"><hr></div>
+      <!-- <div class="title" id="title2">Scaffolding: Быстрее, легче, обольстительней</div>
+      <div class="title">Они совершают свой удивительный пятнадцатиминутный подвиг, используя фичу под названием scaffolding, которая полагается в бОльшей степени на сгенерированный код, волшебно создаваемый Rails командой generate.</div> -->
+    </div>
+<% end %>
+
