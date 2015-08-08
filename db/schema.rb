@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20150805145709) do
   end
 
   create_table "articles_tags", force: true do |t|
-    t.integer "articles_id"
-    t.integer "tags_id"
+    t.integer "article_id"
+    t.integer "tag_id"
   end
 
   create_table "comments", force: true do |t|
